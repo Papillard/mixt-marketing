@@ -28,7 +28,7 @@ nav{
 }
 .logo{text-decoration:none;display:flex;align-items:baseline;line-height:1}
 .logo-mi,.logo-t{font-family:'Fraunces',serif;font-size:34px;font-weight:500;color:var(--ww);letter-spacing:-0.01em;font-variation-settings:'opsz' 144}
-.logo-br{font-family:'Fraunces',serif;font-size:32px;font-weight:400;color:rgba(255,248,242,0.2);letter-spacing:-0.03em;margin:0 0px;font-variation-settings:'opsz' 144}
+.logo-br{font-family:'Fraunces',serif;font-size:32px;font-weight:400;color:rgba(255,248,242,0.2);letter-spacing:-0.03em;margin:0 -3px;font-variation-settings:'opsz' 144}
 .logo-x{font-family:'Fraunces',serif;font-size:34px;font-weight:500;font-style:italic;color:var(--cu);letter-spacing:-0.02em;font-variation-settings:'opsz' 144}
 .nav-links{display:flex;gap:24px;list-style:none}
 .nav-links a{font-size:13px;color:rgba(255,248,242,0.8);text-decoration:none;letter-spacing:0.04em;transition:color 0.2s;font-weight:400;text-shadow:0 1px 8px rgba(0,0,0,0.4)}
@@ -61,7 +61,7 @@ h1{
 h1 em{font-style:italic;color:var(--cu);font-weight:400}
 .hero-sub{
   font-size:17px;font-weight:300;line-height:1.72;
-  color:var(--ww70);max-width:400px;margin-bottom:36px;
+  color:var(--ww70);max-width:460px;margin-bottom:36px;
   opacity:0;animation:fadeUp 0.7s ease-out 0.3s forwards;
 }
 .hero-cta{
@@ -79,7 +79,7 @@ h1 em{font-style:italic;color:var(--cu);font-weight:400}
 }
 .hs-item{display:flex;flex-direction:column;gap:5px;padding-right:28px}
 .hs-num{font-family:'DM Mono',monospace;font-size:34px;font-weight:400;color:var(--ww);letter-spacing:-0.03em;line-height:1}
-.hs-unit{font-size:15px;color:var(--cu);margin-left:1px}
+.hs-unit{font-size:19px;color:var(--ww);margin-left:2px;letter-spacing:-0.01em}
 .hs-label{font-family:'DM Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--ww40)}
 .hs-sep{width:0.5px;height:36px;background:var(--ww15);margin-right:28px;flex-shrink:0}
 
@@ -146,9 +146,12 @@ h1 em{font-style:italic;color:var(--cu);font-weight:400}
   z-index:4;
 }
 .graph-badge--result{
-  color:rgba(255,248,242,0.85);
+  color:rgba(255,248,242,0.95);
   letter-spacing:0.08em;
-  font-size:12px;
+  font-size:13px;
+  padding:6px 12px;
+  background:rgba(8,2,5,0.78);
+  border-color:rgba(255,248,242,0.22);
 }
 </style>
 </head>
@@ -182,18 +185,18 @@ h1 em{font-style:italic;color:var(--cu);font-weight:400}
     <a href="#" class="hero-cta">Commencer mon bilan →</a>
     <div class="hero-stats">
       <div class="hs-item">
-        <div class="hs-num" style="font-size:17px;letter-spacing:0.01em;line-height:1">Formulé sur<br>ordonnance</div>
+        <div class="hs-num" style="font-size:19px;letter-spacing:-0.01em;line-height:1;white-space:nowrap">Sur ordonnance</div>
         <div class="hs-label">Actifs prescrits</div>
       </div>
       <div class="hs-sep"></div>
       <div class="hs-item">
-        <div class="hs-num">8<span class="hs-unit"> semaines</span></div>
+        <div class="hs-num" style="font-size:19px;letter-spacing:-0.01em;line-height:1;white-space:nowrap">8 semaines</div>
         <div class="hs-label">Premiers résultats</div>
       </div>
       <div class="hs-sep"></div>
       <div class="hs-item">
-        <div class="hs-num" style="font-size:17px;letter-spacing:0.01em;line-height:1">Suivi par un dermatologue</div>
-        <div class="hs-label">Prescrit & ajusté</div>
+        <div class="hs-num" style="font-size:19px;letter-spacing:-0.01em;line-height:1;white-space:nowrap">Suivi 1:1</div>
+        <div class="hs-label">Par un dermatologue</div>
       </div>
     </div>
   </div>
@@ -236,10 +239,10 @@ h1 em{font-style:italic;color:var(--cu);font-weight:400}
     </svg>
 
     <!-- Points HTML — positionnés par JS pour éviter distorsion preserveAspectRatio="none" -->
-    <div id="dot-html-0" style="position:absolute;width:7px;height:7px;background:#D4622A;border-radius:50%;box-shadow:0 0 0 4px rgba(212,98,42,0.18);opacity:0;transition:opacity 0.2s;transform:translate(-50%,-50%);pointer-events:none;z-index:4"></div>
-    <div id="dot-html-1" style="position:absolute;width:5px;height:5px;background:rgba(212,98,42,0.85);border-radius:50%;box-shadow:0 0 0 3px rgba(212,98,42,0.14);opacity:0;transition:opacity 0.2s;transform:translate(-50%,-50%);pointer-events:none;z-index:4"></div>
-    <div id="dot-html-2" style="position:absolute;width:5px;height:5px;background:rgba(212,98,42,0.85);border-radius:50%;box-shadow:0 0 0 3px rgba(212,98,42,0.14);opacity:0;transition:opacity 0.2s;transform:translate(-50%,-50%);pointer-events:none;z-index:4"></div>
-    <div id="dot-html-3" style="position:absolute;width:7px;height:7px;background:#D4622A;border-radius:50%;box-shadow:0 0 0 4px rgba(212,98,42,0.18);opacity:0;transition:opacity 0.2s;transform:translate(-50%,-50%);pointer-events:none;z-index:4"></div>
+    <div id="dot-html-0" style="position:absolute;width:10px;height:10px;background:#D4622A;border-radius:50%;box-shadow:0 0 0 5px rgba(212,98,42,0.2);opacity:0;transition:opacity 0.2s;transform:translate(-50%,-50%);pointer-events:none;z-index:4"></div>
+    <div id="dot-html-1" style="position:absolute;width:7px;height:7px;background:rgba(212,98,42,0.9);border-radius:50%;box-shadow:0 0 0 4px rgba(212,98,42,0.16);opacity:0;transition:opacity 0.2s;transform:translate(-50%,-50%);pointer-events:none;z-index:4"></div>
+    <div id="dot-html-2" style="position:absolute;width:7px;height:7px;background:rgba(212,98,42,0.9);border-radius:50%;box-shadow:0 0 0 4px rgba(212,98,42,0.16);opacity:0;transition:opacity 0.2s;transform:translate(-50%,-50%);pointer-events:none;z-index:4"></div>
+    <div id="dot-html-3" style="position:absolute;width:10px;height:10px;background:#D4622A;border-radius:50%;box-shadow:0 0 0 5px rgba(212,98,42,0.2);opacity:0;transition:opacity 0.2s;transform:translate(-50%,-50%);pointer-events:none;z-index:4"></div>
 
       <!-- Labels fin -->
       <g id="labels-end" style="opacity:0;transition:opacity 0.3s">
