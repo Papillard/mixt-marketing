@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mixt — Traitement dermatologique sur-mesure</title>
+<title>Mixt Acné — Traitement dermatologique sur-mesure</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,700&family=DM+Mono:wght@300;400&family=Geist:wght@300;400;500&display=swap" rel="stylesheet">
@@ -11,8 +11,9 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --b:#3d1520;
-  --cu:#D4622A;
-  --cu2:#B85020;
+  /* Variante ACNÉ : corail/pêche légèrement rosé */
+  --cu:#E8856B;
+  --cu2:#C66A52;
   --ww:rgba(255,248,242,1);
   --ww70:rgba(255,248,242,0.7);
   --ww40:rgba(255,248,242,0.4);
@@ -28,12 +29,11 @@ nav{
 }
 .logo{text-decoration:none;display:flex;align-items:baseline;line-height:1}
 .logo-mi,.logo-t{font-family:'Fraunces',serif;font-size:34px;font-weight:500;color:var(--ww);letter-spacing:-0.01em;font-variation-settings:'opsz' 144}
-.logo-br{font-family:'Fraunces',serif;font-size:32px;font-weight:400;color:rgba(255,248,242,0.2);letter-spacing:-0.03em;margin:0 -3px;font-variation-settings:'opsz' 144}
-.logo-x{font-family:'Fraunces',serif;font-size:34px;font-weight:500;font-style:italic;color:var(--cu);letter-spacing:-0.02em;font-variation-settings:'opsz' 144}
+.logo-sep{font-family:'DM Mono',monospace;font-size:12px;color:rgba(255,248,242,0.4);letter-spacing:0.1em;margin-left:10px;text-transform:uppercase;align-self:center}
 .nav-links{display:flex;gap:24px;list-style:none}
 .nav-links a{font-size:13px;color:rgba(255,248,242,0.8);text-decoration:none;letter-spacing:0.04em;transition:color 0.2s;font-weight:400;text-shadow:0 1px 8px rgba(0,0,0,0.4)}
 .nav-links a:hover{color:var(--ww)}
-.nav-pill{font-size:13px;font-weight:600;color:var(--ww);background:var(--cu);padding:10px 22px;border-radius:999px;text-decoration:none;transition:background 0.18s;letter-spacing:0.03em;box-shadow:0 2px 12px rgba(212,98,42,0.4)}
+.nav-pill{font-size:13px;font-weight:600;color:var(--ww);background:var(--cu);padding:10px 22px;border-radius:999px;text-decoration:none;transition:background 0.18s;letter-spacing:0.03em;box-shadow:0 2px 12px rgba(232,133,107,0.4)}
 .nav-pill:hover{background:var(--cu2)}
 
 /* HERO */
@@ -59,14 +59,6 @@ h1{
   opacity:0;animation:fadeUp 0.7s ease-out 0.2s forwards;
 }
 h1 em{font-style:italic;color:var(--cu);font-weight:400}
-.hero-h1b{
-  font-family:'Fraunces',serif;
-  font-size:clamp(20px,2.4vw,30px);font-weight:400;font-style:italic;
-  color:var(--cu);letter-spacing:-0.01em;margin-bottom:28px;
-  font-variation-settings:'opsz' 48;
-  opacity:0;animation:fadeUp 0.7s ease-out 0.25s forwards;
-  line-height:1.3;
-}
 .hero-sub{
   font-size:20px;font-weight:400;line-height:1.65;
   color:var(--ww70);max-width:480px;margin-bottom:32px;
@@ -78,6 +70,7 @@ h1 em{font-style:italic;color:var(--cu);font-weight:400}
   border-radius:999px;text-decoration:none;width:fit-content;
   transition:background 0.18s;
   opacity:0;animation:fadeUp 0.7s ease-out 0.4s forwards;
+  box-shadow:0 2px 16px rgba(232,133,107,0.35);
 }
 .hero-cta:hover{background:var(--cu2)}
 .hero-stats{
@@ -115,7 +108,6 @@ h1 em{font-style:italic;color:var(--cu);font-weight:400}
 .dot-point{opacity:0;transition:opacity 0.3s,transform 0.3s;transform-box:fill-box;transform-origin:center;transform:scale(0)}
 .labels-g{opacity:0;transition:opacity 0.5s}
 
-/* SVG au-dessus du gradient */
 .hero-right svg{z-index:3 !important}
 
 @keyframes zoomInPhoto{from{transform:scale(1.05)}to{transform:scale(1)}}
@@ -152,12 +144,12 @@ h1 em{font-style:italic;color:var(--cu);font-weight:400}
   z-index:4;
 }
 @keyframes pulseHalo{
-  0%,100%{box-shadow:0 0 0 5px rgba(212,98,42,0.2)}
-  50%{box-shadow:0 0 0 10px rgba(212,98,42,0.06)}
+  0%,100%{box-shadow:0 0 0 5px rgba(232,133,107,0.22)}
+  50%{box-shadow:0 0 0 10px rgba(232,133,107,0.07)}
 }
 @keyframes pulseHaloSm{
-  0%,100%{box-shadow:0 0 0 4px rgba(212,98,42,0.16)}
-  50%{box-shadow:0 0 0 8px rgba(212,98,42,0.05)}
+  0%,100%{box-shadow:0 0 0 4px rgba(232,133,107,0.18)}
+  50%{box-shadow:0 0 0 8px rgba(232,133,107,0.06)}
 }
 #dot-html-0,#dot-html-3{animation:pulseHalo 2.4s ease-in-out infinite}
 #dot-html-1,#dot-html-2{animation:pulseHaloSm 2.4s ease-in-out infinite}
@@ -178,6 +170,7 @@ h1 em{font-style:italic;color:var(--cu);font-weight:400}
   <div style="display:flex;align-items:center;gap:40px">
     <a href="#" class="logo">
       <span class="logo-mi">mixt</span>
+      <span class="logo-sep">Acné</span>
     </a>
     <ul class="nav-links">
       <li><a href="#">Approche</a></li>
@@ -192,9 +185,9 @@ h1 em{font-style:italic;color:var(--cu);font-weight:400}
 
   <!-- GAUCHE -->
   <div class="hero-left">
-    <div class="hero-tag">Programme dermato · 12 semaines</div>
-    <h1>Votre peau mérite un traitement <em>sur-mesure.</em></h1>
-    <p class="hero-sub">Un dermatologue comprend votre peau et prescrit un traitement personnalisé. Préparé par une pharmacie partenaire. Ajusté mois après mois.</p>
+    <div class="hero-tag">Programme Mixt · Acné</div>
+    <h1>Votre acné n'est pas un échec <em>de routine.</em></h1>
+    <p class="hero-sub">Un dermatologue comprend votre peau et prescrit un traitement sur-mesure. Préparé par une pharmacie partenaire. Ajusté mois après mois.</p>
     <a href="#" class="hero-cta">Obtenir ma formule →</a>
     <div class="hero-stats">
       <div class="hs-item">
@@ -217,8 +210,8 @@ h1 em{font-style:italic;color:var(--cu);font-weight:400}
   <!-- DROITE -->
   <div class="hero-right">
     <img class="hero-photo"
-         src="images/hero-new.jpg"
-         alt="Patiente Mixt">
+         src="images/acne-hero.jpg"
+         alt="Patiente Mixt Acné">
 
     <!-- SVG full overlay -->
     <svg id="hero-svg" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:3;overflow:visible"
@@ -226,7 +219,7 @@ h1 em{font-style:italic;color:var(--cu);font-weight:400}
          xmlns="http://www.w3.org/2000/svg"
          preserveAspectRatio="none">
 
-      <!-- Axes — apparaissent en premier -->
+      <!-- Axes -->
       <g id="axes" style="opacity:0;transition:opacity 0.4s">
         <line x1="8" y1="38" x2="8" y2="93" stroke="rgba(255,248,242,0.22)" stroke-width="0.18"/>
         <line x1="8" y1="93" x2="96" y2="93" stroke="rgba(255,248,242,0.22)" stroke-width="0.18"/>
@@ -236,28 +229,16 @@ h1 em{font-style:italic;color:var(--cu);font-weight:400}
         <line x1="94" y1="93" x2="94" y2="95" stroke="rgba(255,248,242,0.22)" stroke-width="0.18"/>
       </g>
 
-      <!-- Badge MASI positionné par JS après calcul du premier point -->
-
-      <!-- Courbe exponentielle prononcée — part de y=40, forte courbure initiale -->
+      <!-- Courbe plus prononcée pour matcher un -63% vs -16% -->
       <path id="curve"
-        d="M8,40 C14,58 28,75 52,83 C68,88 82,90 94,91"
+        d="M8,40 C14,62 28,80 52,88 C68,91 82,92 94,93"
         fill="none"
         stroke="rgba(255,248,242,0.5)"
         stroke-width="0.28"
         stroke-dasharray="2.5 2.8"
         stroke-linecap="round"/>
 
-      <!-- Points positionnés par JS en HTML absolu, pas en SVG -->
-
-    </svg>
-
-    <!-- Points HTML — positionnés par JS pour éviter distorsion preserveAspectRatio="none" -->
-    <div id="dot-html-0" style="position:absolute;width:10px;height:10px;background:#D4622A;border-radius:50%;box-shadow:0 0 0 5px rgba(212,98,42,0.2);opacity:0;transition:opacity 0.2s;transform:translate(-50%,-50%);pointer-events:none;z-index:4"></div>
-    <div id="dot-html-1" style="position:absolute;width:7px;height:7px;background:rgba(212,98,42,0.9);border-radius:50%;box-shadow:0 0 0 4px rgba(212,98,42,0.16);opacity:0;transition:opacity 0.2s;transform:translate(-50%,-50%);pointer-events:none;z-index:4"></div>
-    <div id="dot-html-2" style="position:absolute;width:7px;height:7px;background:rgba(212,98,42,0.9);border-radius:50%;box-shadow:0 0 0 4px rgba(212,98,42,0.16);opacity:0;transition:opacity 0.2s;transform:translate(-50%,-50%);pointer-events:none;z-index:4"></div>
-    <div id="dot-html-3" style="position:absolute;width:10px;height:10px;background:#D4622A;border-radius:50%;box-shadow:0 0 0 5px rgba(212,98,42,0.2);opacity:0;transition:opacity 0.2s;transform:translate(-50%,-50%);pointer-events:none;z-index:4"></div>
-
-      <!-- Labels fin -->
+      <!-- Labels fin (intégrés dans le SVG pour qu'ils rendent bien) -->
       <g id="labels-end" style="opacity:0;transition:opacity 0.3s">
         <text x="8" y="97" font-family="'DM Mono',monospace" font-size="2.8" fill="rgba(255,248,242,0.45)" text-anchor="middle">S.0</text>
         <text x="94" y="97" font-family="'DM Mono',monospace" font-size="2.8" fill="rgba(255,248,242,0.45)" text-anchor="middle">S.12</text>
@@ -265,9 +246,15 @@ h1 em{font-style:italic;color:var(--cu);font-weight:400}
 
     </svg>
 
-    <!-- Badges HTML — layout CSS propre, padding symétrique, min-width -->
-    <div id="badge-melasma-html" class="graph-badge" style="opacity:0;transition:opacity 0.4s">Taches brunes</div>
-    <div id="badge-result-html" class="graph-badge graph-badge--result" style="position:absolute;bottom:11%;right:4%;opacity:0;transition:opacity 0.3s">−16%</div>
+    <!-- Points HTML -->
+    <div id="dot-html-0" style="position:absolute;width:10px;height:10px;background:#E8856B;border-radius:50%;box-shadow:0 0 0 5px rgba(232,133,107,0.22);opacity:0;transition:opacity 0.2s;transform:translate(-50%,-50%);pointer-events:none;z-index:4"></div>
+    <div id="dot-html-1" style="position:absolute;width:7px;height:7px;background:rgba(232,133,107,0.9);border-radius:50%;box-shadow:0 0 0 4px rgba(232,133,107,0.18);opacity:0;transition:opacity 0.2s;transform:translate(-50%,-50%);pointer-events:none;z-index:4"></div>
+    <div id="dot-html-2" style="position:absolute;width:7px;height:7px;background:rgba(232,133,107,0.9);border-radius:50%;box-shadow:0 0 0 4px rgba(232,133,107,0.18);opacity:0;transition:opacity 0.2s;transform:translate(-50%,-50%);pointer-events:none;z-index:4"></div>
+    <div id="dot-html-3" style="position:absolute;width:10px;height:10px;background:#E8856B;border-radius:50%;box-shadow:0 0 0 5px rgba(232,133,107,0.22);opacity:0;transition:opacity 0.2s;transform:translate(-50%,-50%);pointer-events:none;z-index:4"></div>
+
+    <!-- Badges HTML -->
+    <div id="badge-melasma-html" class="graph-badge" style="opacity:0;transition:opacity 0.4s">Lésions inflammatoires</div>
+    <div id="badge-result-html" class="graph-badge graph-badge--result" style="position:absolute;bottom:11%;right:4%;opacity:0;transition:opacity 0.3s">−63%</div>
 
     <div class="hero-divider"></div>
   </div>
@@ -275,14 +262,13 @@ h1 em{font-style:italic;color:var(--cu);font-weight:400}
 </section>
 
 <script>
-const DURATION = 2500; // ms — rapide
-const DELAY    = 800;  // ms
+const DURATION = 2500;
+const DELAY    = 800;
 
 const curve    = document.getElementById('curve');
 const totalLen = curve.getTotalLength();
 const FRACS = [0, 0.33, 0.66, 1.0];
 
-// Positionner chaque point exactement sur le path
 function svgPtToPx(pt) {
   const svg = document.getElementById('hero-svg');
   const svgRect = svg.getBoundingClientRect();
@@ -293,7 +279,6 @@ function svgPtToPx(pt) {
   };
 }
 
-// Pré-positionner tous les dots au bon endroit dès le départ
 FRACS.forEach((frac, i) => {
   const pt  = curve.getPointAtLength(frac * totalLen);
   const px  = svgPtToPx(pt);
@@ -301,7 +286,6 @@ FRACS.forEach((frac, i) => {
   if (dot) { dot.style.left = px.x + 'px'; dot.style.top = px.y + 'px'; }
 });
 
-// Init dasharray correctement — PAS de transition CSS sur la courbe
 curve.style.transition = 'none';
 curve.style.strokeDasharray  = totalLen;
 curve.style.strokeDashoffset = totalLen;
@@ -315,11 +299,9 @@ function popDot(i) {
   if (dot) dot.style.opacity = '1';
 }
 
-// 1. Axes + badge MASI en premier
 setTimeout(() => {
   document.getElementById('axes').style.opacity = '1';
 
-  // Positionner le badge MELASMA juste au-dessus du premier point
   const svg = document.getElementById('hero-svg');
   const svgRect = svg.getBoundingClientRect();
   const parentRect = svg.parentElement.getBoundingClientRect();
@@ -333,7 +315,6 @@ setTimeout(() => {
   badge.style.opacity = '1';
 }, DELAY - 300);
 
-// 2. Animation RAF uniquement — pas de transition CSS
 let triggered = new Set();
 let startTime = null;
 
